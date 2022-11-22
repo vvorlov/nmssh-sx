@@ -1,40 +1,29 @@
-Pod::Spec.new do |s|
-  s.name             = 'nmssh-sx'
-  s.version          = '0.1.2'
-  s.summary          = 'Copy ofNMSSSH lib for Sendlinx'
+Pod::Spec.new do |spec|
+  spec.name         = "nmssh-sx"
+  spec.version      = "0.1.4"
+  spec.summary      = "Copy of NMSSH for the Sendlinx project with M1 support."
+  spec.homepage     = "https://github.com/NMSSH/NMSSH"
+  spec.license      = 'MIT'
+  spec.authors      = { "Christoffer Lejdborg" => "hello@9muses.se", "Tommaso Madonia" => "tommaso@madonia.me", "Vlad Orlov" => "vorlovx@gmail.com" }
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  spec.source       = { :git => 'https://github.com/vvorlov/nmssh-sx.git', :tag => s.version.to_s }
 
-  s.description      = "foo description. Copy ofNMSSSH lib for Sendlinx"
+  spec.requires_arc = true
+  spec.platform = :osx
 
-  s.homepage         = 'https://github.com/vvorlov/nmssh-sx'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'vvorlov' => 'wk.orlov@gmail.com' }
-  s.source           = { :git => 'https://github.com/vvorlov/nmssh-sx.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  spec.source_files = 'NMSSH', 'NMSSH/**/*.{h,m}'
+  spec.public_header_files  = 'NMSSH/*.h', 'NMSSH/Protocols/*.h', 'NMSSH/Config/NMSSHLogger.h'
+  spec.private_header_files = 'NMSSH/Config/NMSSH+Protected.h', 'NMSSH/Config/socket_helper.h'
+  spec.libraries    = 'z'
+  spec.framework    = 'CFNetwork'
 
-  s.requires_arc = true
-  s.platform = :osx
-  s.osx.deployment_target = "10.10"
+  spec.osx.deployment_target  = '10.8'
+  spec.osx.vendored_libraries = 'NMSSH-OSX/Libraries/lib/libssh2.a', 'NMSSH-OSX/Libraries/lib/libssl.a', 'NMSSH-OSX/Libraries/lib/libcrypto.a'
+  spec.osx.source_files       = 'NMSSH-OSX', 'NMSSH-OSX/Libraries/**/*.h'
+  spec.osx.public_header_files  = 'NMSSH-OSX/Libraries/**/*.h'
 
-  s.source_files = 'nmssh-sx/Classes/**/*'
-
-  s.swift_versions = '4.0'
-
-  s.xcconfig = {
+  spec.xcconfig = {
     "OTHER_LDFLAGS" => "-ObjC",
   }
 
-  # s.resource_bundles = {
-  #   'nmssh-sx' => ['nmssh-sx/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'Cocoa'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
