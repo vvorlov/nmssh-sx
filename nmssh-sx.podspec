@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "nmssh-sx"
-  spec.version      = "0.1.5"
+  spec.version      = "0.1.6"
   spec.summary      = "Copy of NMSSH for the Sendlinx project with M1 support."
   spec.homepage     = "https://github.com/NMSSH/NMSSH"
   spec.license      = 'MIT'
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.libraries    = 'z'
   spec.framework    = 'CFNetwork'
 
-  spec.osx.deployment_target  = '10.8'
+  spec.osx.deployment_target  = '10.15'
   spec.osx.vendored_libraries = 'NMSSH-OSX/Libraries/lib/libssh2.a', 'NMSSH-OSX/Libraries/lib/libssl.a', 'NMSSH-OSX/Libraries/lib/libcrypto.a'
   spec.osx.source_files       = 'NMSSH-OSX', 'NMSSH-OSX/Libraries/**/*.h'
   spec.osx.public_header_files  = 'NMSSH-OSX/Libraries/**/*.h'
