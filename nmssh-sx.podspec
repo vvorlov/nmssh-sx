@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "nmssh-sx"
-  spec.version      = "0.1.6"
+  spec.version      = "0.1.7"
   spec.summary      = "Copy of NMSSH for the Sendlinx project with M1 support."
   spec.homepage     = "https://github.com/NMSSH/NMSSH"
   spec.license      = 'MIT'
