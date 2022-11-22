@@ -1,0 +1,22 @@
+{
+  "name": "nmssh-sx",
+  "version": "0.1.0",
+  "summary": "A short description of nmssh-sx.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/vvorlov/nmssh-sx",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "vvorlov": "wk.orlov@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/vvorlov/nmssh-sx.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "osx": "10.10"
+  },
+  "source_files": "nmssh-sx/Classes/**/*"
+}

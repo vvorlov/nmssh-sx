@@ -1,0 +1,16 @@
+PODS:
+  - nmssh-sx (0.1.0)
+
+DEPENDENCIES:
+  - nmssh-sx (from `../`)
+
+EXTERNAL SOURCES:
+  nmssh-sx:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  nmssh-sx: 30a69e24e407cbf8189a61051c1e6dc2ba740935
+
+PODFILE CHECKSUM: 85dad933f53b02c4c8f3b61a2f21eff11e024763
+
+COCOAPODS: 1.11.3

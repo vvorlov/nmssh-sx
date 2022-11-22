@@ -1,0 +1,6 @@
+framework module nmssh_sx {
+  umbrella header "nmssh-sx-umbrella.h"
+
+  export *
+  module * { export * }
+}

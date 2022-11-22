@@ -1,0 +1,6 @@
+use_frameworks!
+target 'nmssh-sx_Tests' do
+  pod 'nmssh-sx', :path => '../'
+  
+  
+end
