@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
   spec.name         = "nmssh-sx"
-  spec.version      = "0.1.4"
+  spec.version      = "0.1.5"
   spec.summary      = "Copy of NMSSH for the Sendlinx project with M1 support."
   spec.homepage     = "https://github.com/NMSSH/NMSSH"
   spec.license      = 'MIT'
   spec.authors      = { "Christoffer Lejdborg" => "hello@9muses.se", "Tommaso Madonia" => "tommaso@madonia.me", "Vlad Orlov" => "vorlovx@gmail.com" }
 
-  spec.source       = { :git => 'https://github.com/vvorlov/nmssh-sx.git', :tag => s.version.to_s }
+  spec.source       = { :git => 'https://github.com/vvorlov/nmssh-sx.git', :tag => spec.version.to_s }
 
   spec.requires_arc = true
   spec.platform = :osx
